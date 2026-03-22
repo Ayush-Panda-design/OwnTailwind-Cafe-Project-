@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kōhī — Specialty Coffee · ChaiCSS Demo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+</head>
+<body class="chai-bg-black chai-text-white">
+
+
+<nav id="navbar" class="chai-fixed chai-w-full chai-z-100 chai-transition-all"
+     style="background:var(--nav-bg);border-bottom:1px solid transparent;transition:all 0.3s ease;">
+  <div class="chai-flex chai-justify-between chai-items-center chai-px-8 chai-py-4"
+       style="max-width:1400px;margin:0 auto;">
+
+    <a href="#" class="chai-flex chai-items-center chai-gap-3 chai-no-underline">
+      <div class="chai-flex chai-items-center chai-justify-center chai-rounded-full"
+           style="width:38px;height:38px;background:var(--accent);font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:#0b0a09;font-weight:700;letter-spacing:-0.02em;">
+        K
+      </div>
+      <span class="chai-font-display chai-tracking-widest chai-uppercase chai-text-base"
+            style="font-family:'Cormorant Garamond',serif;color:var(--text-primary);letter-spacing:0.18em;font-weight:300;">
+        Kōhī
+      </span>
+    </a>
+
+    
+    <div id="nav-menu" class="chai-flex chai-items-center chai-gap-8"
+         style="font-family:'DM Sans',sans-serif;">
+      <a href="#menu" class="chai-text-sm chai-no-underline chai-transition-colors chai-hover-text-amber"
+         style="color:var(--text-secondary);letter-spacing:0.08em;text-transform:uppercase;font-size:0.78rem;">Menu</a>
+      <a href="#about" class="chai-text-sm chai-no-underline chai-transition-colors"
+         style="color:var(--text-secondary);letter-spacing:0.08em;text-transform:uppercase;font-size:0.78rem;">Our Story</a>
+      <a href="#labs" class="chai-text-sm chai-no-underline chai-transition-colors"
+         style="color:var(--text-secondary);letter-spacing:0.08em;text-transform:uppercase;font-size:0.78rem;"></a>
+      <a href="#order"
+         class="chai-px-5 chai-py-2 chai-rounded-full chai-text-sm chai-font-medium chai-transition-all chai-cursor-pointer"
+         style="background:var(--accent);color:#0b0a09;font-family:'DM Sans',sans-serif;font-size:0.8rem;letter-spacing:0.05em;text-decoration:none;transition:all 0.2s ease;"
+         onmouseenter="this.style.background='var(--accent-hover)';this.style.transform='translateY(-1px)'"
+         onmouseleave="this.style.background='var(--accent)';this.style.transform='none'">
+        Order Now
+      </a>
+    </div>
+  </div>
+</nav>
+
+
+<section id="hero" class="chai-relative chai-overflow-hidden"
+         style="min-height:100vh;background:var(--bg-page);display:flex;align-items:center;">
+
+
+  <div id="hero-overlay" class="chai-absolute" style="inset:0;pointer-events:none;
+    background:radial-gradient(ellipse 80% 80% at 50% 60%, rgba(200,149,108,0.08) 0%, transparent 70%);
+    z-index:0;"></div>
+
+  <div class="chai-absolute chai-select-none" style="right:-4vw;top:50%;transform:translateY(-50%);
+    font-family:'Cormorant Garamond',serif;font-size:clamp(10rem,18vw,22rem);font-weight:700;
+    color:rgba(200,149,108,0.04);line-height:1;z-index:0;pointer-events:none;white-space:nowrap;">
+    Coffee
+  </div>
+
+  <div class="chai-relative" style="z-index:1;width:100%;max-width:1400px;margin:0 auto;padding:0 2rem;padding-top:6rem;">
+    <div class="chai-flex chai-items-center" style="gap:4rem;flex-wrap:wrap;">
+
+      
+      <div style="flex:1;min-width:340px;" data-animate="up" data-delay="0">
+        <div class="chai-flex chai-items-center chai-gap-3 chai-mb-6">
+          <div style="width:32px;height:1px;background:var(--accent);"></div>
+          <span class="chai-text-xs chai-uppercase chai-tracking-widest"
+                style="color:var(--accent);font-family:'DM Sans',sans-serif;letter-spacing:0.22em;">
+            Specialty Coffee · Est. 2021
+          </span>
+        </div>
+
+        <h1 style="font-family:'Cormorant Garamond',serif;font-size:clamp(3.5rem,7vw,6.5rem);
+                   font-weight:300;line-height:1.05;color:var(--text-primary);margin:0 0 1.5rem;">
+          The Art of<br>
+          <em style="font-style:italic;color:var(--accent);">Perfect</em><br>
+          <span style="font-weight:600;">Extraction</span>
+        </h1>
+
+        <p class="chai-text-lg chai-leading-relaxed chai-mb-10"
+           style="color:var(--text-secondary);font-family:'DM Sans',sans-serif;font-weight:300;
+                  max-width:460px;line-height:1.75;font-size:1.05rem;">
+          Every cup is a conversation between origin, roast, and craft.
+          We source single-origin beans from 14 countries and roast weekly.
+        </p>
+
+        <div class="chai-flex chai-items-center chai-gap-4" style="flex-wrap:wrap;">
+          <a href="#menu"
+             class="chai-px-8 chai-py-4 chai-rounded-full chai-font-medium chai-cursor-pointer chai-transition-all"
+             style="background:var(--accent);color:#0b0a09;font-family:'DM Sans',sans-serif;
+                    font-size:0.9rem;letter-spacing:0.05em;text-decoration:none;display:inline-block;transition:all 0.25s ease;"
+             onmouseenter="this.style.background='var(--accent-hover)';this.style.transform='translateY(-2px)';this.style.boxShadow='0 12px 40px rgba(200,149,108,0.35)'"
+             onmouseleave="this.style.background='var(--accent)';this.style.transform='none';this.style.boxShadow='none'">
+            Explore Menu
+          </a>
+          <a href="#about"
+             class="chai-px-8 chai-py-4 chai-rounded-full chai-cursor-pointer chai-transition-all"
+             style="border:1px solid var(--border);color:var(--text-secondary);font-family:'DM Sans',sans-serif;
+                    font-size:0.9rem;letter-spacing:0.05em;text-decoration:none;display:inline-block;transition:all 0.25s ease;"
+             onmouseenter="this.style.borderColor='var(--accent)';this.style.color='var(--text-primary)'"
+             onmouseleave="this.style.borderColor='var(--border)';this.style.color='var(--text-secondary)'">
+            Our Story
+          </a>
+        </div>
+      </div>
+
+    
+      <div style="flex:1;min-width:300px;max-width:460px;" data-animate="up" data-delay="150">
+        <div class="chai-rounded-3xl chai-p-8 chai-shadow-coffee"
+             style="background:var(--bg-card);border:1px solid var(--border);">
+
+          <div class="chai-flex chai-items-center chai-justify-between chai-mb-6">
+            <span class="chai-text-xs chai-uppercase chai-tracking-widest"
+                  style="color:var(--accent);font-family:'DM Sans',sans-serif;letter-spacing:0.18em;">
+              Today's Pour
+            </span>
+            <span class="chai-text-xs" style="color:var(--text-muted);font-family:'DM Sans',sans-serif;">
+              Limited
+            </span>
+          </div>
+
+      
+          <div class="chai-flex chai-justify-center chai-mb-6">
+            <div class="chai-relative" style="width:140px;height:140px;">
+              
+              <div class="chai-absolute" style="bottom:0;left:50%;transform:translateX(-50%);
+                width:100px;height:80px;background:var(--accent);border-radius:4px 4px 20px 20px;"></div>
+          
+              <div class="chai-absolute" style="bottom:72px;left:50%;transform:translateX(-50%);
+                width:100px;height:16px;background:#3d1c08;border-radius:2px;"></div>
+        
+              <div class="chai-absolute" style="bottom:90px;left:50%;transform:translateX(-50%);
+                display:flex;gap:10px;animation:float 2s ease-in-out infinite;">
+                <div style="width:3px;height:20px;background:rgba(200,149,108,0.4);border-radius:3px;transform:rotate(-5deg);"></div>
+                <div style="width:3px;height:26px;background:rgba(200,149,108,0.3);border-radius:3px;transform:rotate(5deg);animation-delay:0.3s;"></div>
+                <div style="width:3px;height:18px;background:rgba(200,149,108,0.4);border-radius:3px;transform:rotate(-3deg);animation-delay:0.6s;"></div>
+              </div>
+         
+              <div class="chai-absolute" style="bottom:16px;right:12px;width:22px;height:40px;
+                border:3px solid var(--accent);border-radius:0 20px 20px 0;border-left:none;"></div>
+  
+              <div class="chai-absolute" style="bottom:-6px;left:50%;transform:translateX(-50%);
+                width:120px;height:10px;background:var(--bg-surface);border-radius:50%;"></div>
+            </div>
+          </div>
+
+          <h3 class="chai-text-2xl chai-font-semibold chai-text-center chai-mb-2"
+              style="font-family:'Cormorant Garamond',serif;color:var(--text-primary);">
+            Ethiopia Yirgacheffe
+          </h3>
+          <p class="chai-text-sm chai-text-center chai-mb-6"
+             style="color:var(--text-muted);font-family:'DM Sans',sans-serif;line-height:1.6;">
+            Bright jasmine florals · Blueberry · Dark chocolate finish
+          </p>
+
+          <div class="chai-flex chai-justify-between chai-items-center">
+            <div>
+              <div class="chai-text-xs" style="color:var(--text-muted);font-family:'DM Sans',sans-serif;margin-bottom:2px;">Starting at</div>
+              <div class="chai-text-2xl chai-font-bold"
+                   style="font-family:'Cormorant Garamond',serif;color:var(--text-primary);">₹280</div>
+            </div>
+            <button class="chai-px-6 chai-py-3 chai-rounded-full chai-cursor-pointer chai-transition-all"
+                    style="background:var(--accent);color:#0b0a09;font-family:'DM Sans',sans-serif;
+                           font-size:0.8rem;font-weight:600;border:none;cursor:pointer;"
+                    onmouseenter="this.style.transform='scale(1.04)'"
+                    onmouseleave="this.style.transform='scale(1)'">
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="chai-flex chai-flex-col chai-items-center chai-py-12" data-animate="up" data-delay="400">
+      <div style="width:1px;height:60px;background:linear-gradient(to bottom, var(--accent), transparent);"></div>
+      <span class="chai-text-xs chai-uppercase chai-tracking-widest"
+            style="color:var(--text-muted);font-family:'DM Sans',sans-serif;letter-spacing:0.2em;margin-top:12px;">
+        Scroll to Explore
+      </span>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<section id="menu" class="chai-py-24" style="background:var(--bg-page);">
+  <div style="max-width:1400px;margin:0 auto;padding:0 2rem;">
+
+   
+    <div class="chai-text-center chai-mb-14" data-animate="up">
+      <div class="chai-flex chai-items-center chai-justify-center chai-gap-4 chai-mb-4">
+        <div style="width:40px;height:1px;background:var(--accent);"></div>
+        <span class="chai-text-xs chai-uppercase chai-tracking-widest"
+              style="color:var(--accent);font-family:'DM Sans',sans-serif;letter-spacing:0.22em;">The Menu</span>
+        <div style="width:40px;height:1px;background:var(--accent);"></div>
+      </div>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,5vw,4rem);
+                 font-weight:300;color:var(--text-primary);margin:0 0 1rem;">
+        Crafted with Intention
+      </h2>
+      <p class="chai-text-base" style="color:var(--text-muted);font-family:'DM Sans',sans-serif;max-width:480px;margin:0 auto;">
+        From single-origin pour-overs to house-fermented sodas — every item is made to order.
+      </p>
+    </div>
+
+
+    <div class="chai-flex chai-justify-center chai-gap-3 chai-mb-12" style="flex-wrap:wrap;" data-animate="up" data-delay="100">
+      <button class="menu-tab chai-px-5 chai-py-2 chai-rounded-full chai-text-sm chai-cursor-pointer chai-transition-all"
+              data-cat="all"
+              style="background:var(--accent);color:#0b0a09;border:1px solid var(--accent);
+                     font-family:'DM Sans',sans-serif;font-size:0.8rem;letter-spacing:0.06em;cursor:pointer;">
+        All
+      </button>
+      <button class="menu-tab chai-px-5 chai-py-2 chai-rounded-full chai-text-sm chai-cursor-pointer chai-transition-all"
+              data-cat="espresso"
+              style="background:transparent;color:var(--text-secondary);border:1px solid transparent;
+                     font-family:'DM Sans',sans-serif;font-size:0.8rem;letter-spacing:0.06em;cursor:pointer;">
+        ☕ Espresso
+      </button>
+      <button class="menu-tab chai-px-5 chai-py-2 chai-rounded-full chai-text-sm chai-cursor-pointer chai-transition-all"
+              data-cat="cold"
+              style="background:transparent;color:var(--text-secondary);border:1px solid transparent;
+                     font-family:'DM Sans',sans-serif;font-size:0.8rem;letter-spacing:0.06em;cursor:pointer;">
+        🧊 Cold Drinks
+      </button>
+      <button class="menu-tab chai-px-5 chai-py-2 chai-rounded-full chai-text-sm chai-cursor-pointer chai-transition-all"
+              data-cat="specialty"
+              style="background:transparent;color:var(--text-secondary);border:1px solid transparent;
+                     font-family:'DM Sans',sans-serif;font-size:0.8rem;letter-spacing:0.06em;cursor:pointer;">
+        ✨ Specialty
+      </button>
+      <button class="menu-tab chai-px-5 chai-py-2 chai-rounded-full chai-text-sm chai-cursor-pointer chai-transition-all"
+              data-cat="dessert"
+              style="background:transparent;color:var(--text-secondary);border:1px solid transparent;
+                     font-family:'DM Sans',sans-serif;font-size:0.8rem;letter-spacing:0.06em;cursor:pointer;">
+        🍰 Desserts
+      </button>
+      <button class="menu-tab chai-px-5 chai-py-2 chai-rounded-full chai-text-sm chai-cursor-pointer chai-transition-all"
+              data-cat="snack"
+              style="background:transparent;color:var(--text-secondary);border:1px solid transparent;
+                     font-family:'DM Sans',sans-serif;font-size:0.8rem;letter-spacing:0.06em;cursor:pointer;">
+        🥐 Snacks
+      </button>
+    </div>
+
+    
+    <div class="chai-grid" style="grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.25rem;">
+
+    
+      <div class="menu-item-card chai-flex chai-rounded-2xl chai-p-6 chai-shadow-md chai-transition-all"
+           data-cat="espresso" data-animate="up" data-delay="0"
+           style="background:var(--bg-card);border:1px solid var(--border);cursor:default;"
+           onmouseenter="this.style.transform='translateY(-4px)';this.style.borderColor='var(--accent)';this.style.boxShadow='0 12px 40px var(--shadow)'"
+           onmouseleave="this.style.transform='none';this.style.borderColor='var(--border)';this.style.boxShadow='0 4px 12px rgba(0,0,0,0.12)'">
+        <div class="chai-flex chai-justify-between chai-items-start chai-mb-3">
+          <h4 class="chai-text-lg chai-font-semibold" style="font-family:'Cormorant Garamond',serif;color:var(--text-primary);margin:0;">Ristretto</h4>
+          <span class="chai-text-base chai-font-bold" style="color:var(--accent);font-family:'DM Sans',sans-serif;white-space:nowrap;margin-left:12px;">₹180</span>
+        </div>
+        <p class="chai-text-sm chai-leading-relaxed" style="color:var(--text-muted);font-family:'DM Sans',sans-serif;margin:0 0 16px;">Ultra-short espresso pull. Syrupy, concentrated, no bitterness.</p>
+        <div class="chai-flex chai-gap-2">
+          <span class="chai-px-3 chai-py-1 chai-rounded-full chai-text-xs" style="background:rgba(200,149,108,0.1);color:var(--accent);font-family:'DM Sans',sans-serif;border:1px solid rgba(200,149,108,0.2);">Intense</span>
+        </div>
+      </div>
+
+      <div class="menu-item-card chai-flex chai-rounded-2xl chai-p-6 chai-shadow-md chai-transition-all"
+           data-cat="espresso" data-animate="up" data-delay="40"
+           style="background:var(--bg-card);border:1px solid var(--border);"
+           onmouseenter="this.style.transform='translateY(-4px)';this.style.borderColor='var(--accent)'"
+           onmouseleave="this.style.transform='none';this.style.borderColor='var(--border)'">
+        <div class="chai-flex chai-justify-between chai-items-start chai-mb-3">
+          <h4 class="chai-text-lg" style="font-family:'Cormorant Garamond',serif;color:var(--text-primary);font-weight:600;margin:0;">Double Espresso</h4>
+          <span style="color:var(--accent);font-family:'DM Sans',sans-serif;font-weight:700;white-space:nowrap;margin-left:12px;">₹220</span>
+        </div>
+        <p class="chai-text-sm chai-leading-relaxed" style="color:var(--text-muted);font-family:'DM Sans',sans-serif;margin:0 0 16px;">Classic doppio. Bold, full-bodied, unapologetically rich.</p>
+        <span class="chai-px-3 chai-py-1 chai-rounded-full chai-text-xs" style="background:rgba(200,149,108,0.1);color:var(--accent);font-family:'DM Sans',sans-serif;border:1px solid rgba(200,149,108,0.2);">Bold</span>
+      </div>
+
+      <div class="menu-item-card chai-flex chai-rounded-2xl chai-p-6 chai-shadow-md chai-transition-all"
+           data-cat="espresso" data-animate="up" data-delay="80"
+           style="background:var(--bg-card);border:1px solid var(--border);"
+           onmouseenter="this.style.transform='translateY(-4px)';this.style.borderColor='var(--accent)'"
+           onmouseleave="this.style.transform='none';this.style.borderColor='var(--border)'">
+        <div class="chai-flex chai-justify-between chai-items-start chai-mb-3">
+          <h4 class="chai-text-lg" style="font-family:'Cormorant Garamond',serif;color:var(--text-primary);font-weight:600;margin:0;">Americano</h4>
+          <span style="color:var(--accent);font-family:'DM Sans',sans-serif;font-weight:700;white-space:nowrap;margin-left:12px;">₹230</span>
+        </div>
+        <p class="chai-text-sm chai-leading-relaxed" style="color:var(--text-muted);font-family:'DM Sans',sans-serif;margin:0 0 16px;">Espresso pulled over hot water. Smooth, clean, long on the palate.</p>
+        <span class="chai-px-3 chai-py-1 chai-rounded-full chai-text-xs" style="background:rgba(200,149,108,0.1);color:var(--accent);font-family:'DM Sans',sans-serif;border:1px solid rgba(200,149,108,0.2);">Smooth</span>
+      </div>
+
+      <div class="menu-item-card chai-flex chai-rounded-2xl chai-p-6 chai-transition-all"
+           data-cat="espresso" data-animate="up" data-delay="120"
+           style="background:var(--bg-card);border:1px solid var(--border);"
+           onmouseenter="this.style.transform='translateY(-4px)';this.style.borderColor='var(--accent)'"
+           onmouseleave="this.style.transform='none';this.style.borderColor='var(--border)'">
+        <div class="chai-flex chai-justify-between chai-items-start chai-mb-3">
+          <h4 class="chai-text-lg" style="font-family:'Cormorant Garamond',serif;color:var(--text-primary);font-weight:600;margin:0;">Flat White</h4>
+          <span style="color:var(--accent);font-family:'DM Sans',sans-serif;font-weight:700;white-space:nowrap;margin-left:12px;">₹290</span>
+        </div>
+        <p class="chai-text-sm chai-leading-relaxed" style="color:var(--text-muted);font-family:'DM Sans',sans-serif;margin:0 0 16px;">Ristretto base with velvety microfoam. Less milk, more coffee.</p>
+        <span class="chai-px-3 chai-py-1 chai-rounded-full chai-text-xs" style="background:rgba(74,158,74,0.12);color:#4a9e4a;font-family:'DM Sans',sans-serif;border:1px solid rgba(74,158,74,0.2);">Velvety</span>
+      </div>
+
+      <div class="menu-item-card chai-flex chai-rounded-2xl chai-p-6 chai-transition-all"
+           data-cat="espresso" data-animate="up" data-delay="160"
+           style="background:var(--bg-card);border:1px solid var(--border);"
+           onmouseenter="this.style.transform='translateY(-4px)';this.style.borderColor='var(--accent)'"
+           onmouseleave="this.style.transform='none';this.style.borderColor='var(--border)'">
+        <div class="chai-flex chai-justify-between chai-items-start chai-mb-3">
+          <h4 class="chai-text-lg" style="font-family:'Cormorant Garamond',serif;color:var(--text-primary);font-weight:600;margin:0;">Cappuccino</h4>
+          <span style="color:var(--accent);font-family:'DM Sans',sans-serif;font-weight:700;white-space:nowrap;margin-left:12px;">₹275</span>
+        </div>
+        <p class="chai-text-sm chai-leading-relaxed" style="color:var(--text-muted);font-family:'DM Sans',sans-serif;margin:0 0 16px;">Equal thirds espresso, steamed milk, silky foam. A holy trinity.</p>
+        <span class="chai-px-3 chai-py-1 chai-rounded-full chai-text-xs" style="background:rgba(200,149,108,0.1);color:var(--accent);font-family:'DM Sans',sans-serif;border:1px solid rgba(200,149,108,0.2);">Classic</span>
+      </div>
+
+      <div class="menu-item-card chai-flex chai-rounded-2xl chai-p-6 chai-transition-all"
+           data-cat="espresso" data-animate="up" data-delay="200"
+           style="background:var(--bg-card);border:1px solid var(--border);"
+           onmouseenter="this.style.transform='translateY(-4px)';this.style.borderColor='var(--accent)'"
+           onmouseleave="this.style.transform='none';this.style.borderColor='var(--border)'">
+        <div class="chai-flex chai-justify-between chai-items-start chai-mb-3">
+          <h4 class="chai-text-lg" style="font-family:'Cormorant Garamond',serif;color:var(--text-primary);font-weight:600;margin:0;">Café Latte</h4>
+          <span style="color:var(--accent);font-family:'DM Sans',sans-serif;font-weight:700;white-space:nowrap;margin-left:12px;">₹295</span>
+        </div>
+        <p class="chai-text-sm chai-leading-relaxed" style="color:var(--text-muted);font-family:'DM Sans',sans-serif;margin:0 0 16px;">Espresso draped in steamed milk. Our canvas for latte art.</p>
+        <span class="chai-px-3 chai-py-1 chai-rounded-full chai-text-xs" style="background:rgba(200,149,108,0.1);color:var(--accent);font-family:'DM Sans',sans-serif;border:1px solid rgba(200,149,108,0.2);">Gentle</span>
+      </div>
+
+      <div class="menu-item-card chai-flex chai-rounded-2xl chai-p-6 chai-transition-all"
+           data-cat="espresso"
+           style="background:var(--bg-card);border:1px solid var(--border);"
+           onmouseenter="this.style.transform='translateY(-4px)';this.style.borderColor='var(--accent)'"
+           onmouseleave="this.style.transform='none';this.style.borderColor='var(--border)'">
+        <div class="chai-flex chai-justify-between chai-items-start chai-mb-3">
+          <h4 class="chai-text-lg" style="font-family:'Cormorant Garamond',serif;color:var(--text-primary);font-weight:600;margin:0;">Cortado</h4>
+          <span style="color:var(--accent);font-family:'DM Sans',sans-serif;font-weight:700;white-space:nowrap;margin-left:12px;">₹260</span>
+        </div>
+        <p class="chai-text-sm chai-leading-relaxed" style="color:var(--text-muted);font-family:'DM Sans',sans-serif;margin:0 0 16px;">Equal parts espresso and warm milk. Balance in every sip.</p>
+        <span class="chai-px-3 chai-py-1 chai-rounded-full chai-text-xs" style="background:rgba(200,149,108,0.1);color:var(--accent);font-family:'DM Sans',sans-serif;border:1px solid rgba(200,149,108,0.2);">Balanced</span>
+      </div>
+
+      <div class="menu-item-card chai-flex chai-rounded-2xl chai-p-6 chai-transition-all"
+           data-cat="espresso"
+           style="background:var(--bg-card);border:1px solid var(--border);"
+           onmouseenter="this.style.transform='translateY(-4px)';this.style.borderColor='var(--accent)'"
+           onmouseleave="this.style.transform='none';this.style.borderColor='var(--border)'">
+        <div class="chai-flex chai-justify-between chai-items-start chai-mb-3">
+          <h4 class="chai-text-lg" style="font-family:'Cormorant Garamond',serif;color:var(--text-primary);font-weight:600;margin:0;">Macchiato</h4>
+          <span style="color:var(--accent);font-family:'DM Sans',sans-serif;font-weight:700;white-space:nowrap;margin-left:12px;">₹245</span>
+        </div>
+        <p class="chai-text-sm chai-leading-relaxed" style="color:var(--text-muted);font-family:'DM Sans',sans-serif;margin:0 0 16px;">Espresso "stained" with a dollop of velvety foam. Elegant.</p>
+        <span class="chai-px-3 chai-py-1 chai-rounded-full chai-text-xs" style="background:rgba(200,149,108,0.1);color:var(--accent);font-family:'DM Sans',sans-serif;border:1px solid rgba(200,149,108,0.2);">Artisan</span>
+      </div>
+
+      
+      <div class="menu-item-card chai-flex chai-rounded-2xl chai-p-6 chai-shadow-warm chai-transition-all"
+           data-cat="espresso"
+           style="background:linear-gradient(135deg,#2d1a0a,#1a0f06);border:1px solid rgba(200,149,108,0.3);"
+           onmouseenter="this.style.transform='translateY(-4px)'"
+           onmouseleave="this.style.transform='none'">
+        <div class="chai-flex chai-justify-between chai-items-start chai-mb-3">
+          <div>
+            <span class="chai-text-xs chai-uppercase" style="color:var(--accent);font-family:'DM Sans',sans-serif;letter-spacing:0.12em;display:block;margin-bottom:4px;">⭐ Chef's Pick</span>
+            <h4 class="chai-text-xl" style="font-family:'Cormorant Garamond',serif;color:var(--text-primary);font-weight:600;margin:0;">Vienna Coffee</h4>
+          </div>
+          <span style="color:var(--accent);font-family:'DM Sans',sans-serif;font-weight:700;white-space:nowrap;margin-left:12px;font-size:1.15rem;">₹340</span>
+        </div>
+        <p class="chai-text-sm chai-leading-relaxed" style="color:rgba(253,243,228,0.7);font-family:'DM Sans',sans-serif;margin:0 0 16px;">Strong espresso crowned with clouds of whipped cream. Viennese tradition.</p>
+        <span class="chai-px-3 chai-py-1 chai-rounded-full chai-text-xs" style="background:rgba(200,149,108,0.2);color:var(--accent);font-family:'DM Sans',sans-serif;border:1px solid rgba(200,149,108,0.35);">Signature</span>
+      </div>
+
+      <div class="menu-item-card chai-flex chai-rounded-2xl chai-p-6 chai-transition-all"
+           data-cat="cold"
+           style="background:var(--bg-card);border:1px solid var(--border);"
+           onmouseenter="this.style.transform='translateY(-4px)';this.style.borderColor='#60a5fa'"
+           onmouseleave="this.style.transform='none';this.style.borderColor='var(--border)'">
+        <div class="chai-flex chai-justify-between chai-items-start chai-mb-3">
+          <h4 class="chai-text-lg" style="font-family:'Cormorant Garamond',serif;color:var(--text-primary);font-weight:600;margin:0;">Cold Brew</h4>
+          <span style="color:#60a5fa;font-family:'DM Sans',sans-serif;font-weight:700;white-space:nowrap;margin-left:12px;">₹290</span>
+        </div>
+        <p class="chai-text-sm chai-leading-relaxed" style="color:var(--text-muted);font-family:'DM Sans',sans-serif;margin:0 0 16px;">Steeped 20 hours in cold water. Smooth, naturally sweet, low acid.</p>
+        <span class="chai-px-3 chai-py-1 chai-rounded-full chai-text-xs" style="background:rgba(96,165,250,0.1);color:#60a5fa;font-family:'DM Sans',sans-serif;border:1px solid rgba(96,165,250,0.2);">20hr Steep</span>
+      </div>
+
+      <div class="menu-item-card chai-flex chai-rounded-2xl chai-p-6 chai-transition-all"
+           data-cat="cold"
+           style="background:var(--bg-card);border:1px solid var(--border);"
+           onmouseenter="this.style.transform='translateY(-4px)';this.style.borderColor='#60a5fa'"
+           onmouseleave="this.style.transform='none';this.style.borderColor='var(--border)'">
+        <div class="chai-flex chai-justify-between chai-items-start chai-mb-3">
+          <h4 class="chai-text-lg" style="font-family:'Cormorant Garamond',serif;color:var(--text-primary);font-weight:600;margin:0;">Nitro Cold Brew</h4>
+          <span style="color:#60a5fa;font-family:'DM Sans',sans-serif;font-weight:700;white-space:nowrap;margin-left:12px;">₹340</span>
+        </div>
+        <p class="chai-text-sm chai-leading-relaxed" style="color:var(--text-muted);font-family:'DM Sans',sans-serif;margin:0 0 16px;">Nitrogen-infused cold brew on tap. Cascading bubbles, creamy head.</p>
+        <span class="chai-px-3 chai-py-1 chai-rounded-full chai-text-xs" style="background:rgba(96,165,250,0.1);color:#60a5fa;font-family:'DM Sans',sans-serif;border:1px solid rgba(96,165,250,0.2);">Nitrogen</span>
+      </div>
+
+      <div class="menu-item-card chai-flex chai-rounded-2xl chai-p-6 chai-transition-all"
+           data-cat="cold"
+           style="background:var(--bg-card);border:1px solid var(--border);"
+           onmouseenter="this.style.transform='translateY(-4px)';this.style.borderColor='#60a5fa'"
+           onmouseleave="this.style.transform='none';this.style.borderColor='var(--border)'">
+        <div class="chai-flex chai-justify-between chai-items-start chai-mb-3">
+          <h4 class="chai-text-lg" style="font-family:'Cormorant Garamond',serif;color:var(--text-primary);font-weight:600;margin:0;">Iced Latte</h4>
+          <span style="color:#60a5fa;font-family:'DM Sans',sans-serif;font-weight:700;white-space:nowrap;margin-left:12px;">₹280</span>
+        </div>
+        <p class="chai-text-sm chai-leading-relaxed" style="color:var(--text-muted);font-family:'DM Sans',sans-serif;margin:0 0 16px;">Double shot over ice, cold-frothed oat or whole milk. Summer essential.</p>
+        <span class="chai-px-3 chai-py-1 chai-rounded-full chai-text-xs" style="background:rgba(96,165,250,0.1);color:#60a5fa;font-family:'DM Sans',sans-serif;border:1px solid rgba(96,165,250,0.2);">Refreshing</span>
+      </div>
+
+      <div class="menu-item-card chai-flex chai-rounded-2xl chai-p-6 chai-transition-all"
+           data-cat="cold"
+           style="background:var(--bg-card);border:1px solid var(--border);"
+           onmouseenter="this.style.transform='translateY(-4px)';this.style.borderColor='#60a5fa'"
+           onmouseleave="this.style.transform='none';this.style.borderColor='var(--border)'">
+        <div class="chai-flex chai-justify-between chai-items-start chai-mb-3">
+          <h4 class="chai-text-lg" style="font-family:'Cormorant Garamond',serif;color:var(--text-primary);font-weight:600;margin:0;">Dalgona</h4>
+          <span style="color:#60a5fa;font-family:'DM Sans',sans-serif;font-weight:700;white-space:nowrap;margin-left:12px;">₹310</span>
+        </div>
+        <p class="chai-text-sm chai-leading-relaxed" style="color:var(--text-muted);font-family:'DM Sans',sans-serif;margin:0 0 16px;">Whipped coffee cloud on iced oat milk. Light as air, rich as night.</p>
+        <span class="chai-px-3 chai-py-1 chai-rounded-full chai-text-xs" style="background:rgba(96,165,250,0.1);color:#60a5fa;font-family:'DM Sans',sans-serif;border:1px solid rgba(96,165,250,0.2);">Whipped</span>
+      </div>
+
+      <div class="menu-item-card chai-flex chai-rounded-2xl chai-p-6 chai-transition-all"
+           data-cat="cold"
+           style="background:var(--bg-card);border:1px solid var(--border);"
+           onmouseenter="this.style.transform='translateY(-4px)';this.style.borderColor='#60a5fa'"
+           onmouseleave="this.style.transform='none';this.style.borderColor='var(--border)'">
+        <div class="chai-flex chai-justify-between chai-items-start chai-mb-3">
+          <h4 class="chai-text-lg" style="font-family:'Cormorant Garamond',serif;color:var(--text-primary);font-weight:600;margin:0;">Shakerato</h4>
+          <span style="color:#60a5fa;font-family:'DM Sans',sans-serif;font-weight:700;white-space:nowrap;margin-left:12px;">₹295</span>
+        </div>
+        <p class="chai-text-sm chai-leading-relaxed" style="color:var(--text-muted);font-family:'DM Sans',sans-serif;margin:0 0 16px;">Espresso shaken vigorously with ice until perfectly frothy. Italian summer.</p>
+        <span class="chai-px-3 chai-py-1 chai-rounded-full chai-text-xs" style="background:rgba(96,165,250,0.1);color:#60a5fa;font-family:'DM Sans',sans-serif;border:1px solid rgba(96,165,250,0.2);">Italian</span>
+      </div>
+
+      <div class="menu-item-card chai-flex chai-rounded-2xl chai-p-6 chai-transition-all"
+           data-cat="cold"
+           style="background:var(--bg-card);border:1px solid var(--border);"
+           onmouseenter="this.style.transform='translateY(-4px)';this.style.borderColor='#60a5fa'"
+           onmouseleave="this.style.transform='none';this.style.borderColor='var(--border)'">
+        <div class="chai-flex chai-justify-between chai-items-start chai-mb-3">
+          <h4 class="chai-text-lg" style="font-family:'Cormorant Garamond',serif;color:var(--text-primary);font-weight:600;margin:0;">Cold Brew Tonic</h4>
+          <span style="color:#60a5fa;font-family:'DM Sans',sans-serif;font-weight:700;white-space:nowrap;margin-left:12px;">₹320</span>
+        </div>
+        <p class="chai-text-sm chai-leading-relaxed" style="color:var(--text-muted);font-family:'DM Sans',sans-serif;margin:0 0 16px;">Cold brew over premium tonic water. Bitter, bubbly, beautiful.</p>
+        <span class="chai-px-3 chai-py-1 chai-rounded-full chai-text-xs" style="background:rgba(96,165,250,0.1);color:#60a5fa;font-family:'DM Sans',sans-serif;border:1px solid rgba(96,165,250,0.2);">Effervescent</span>
+      </div>
+
+      <div class="menu-item-card chai-flex chai-rounded-2xl chai-p-6 chai-transition-all"
+           data-cat="cold"
+           style="background:var(--bg-card);border:1px solid var(--border);"
+           onmouseenter="this.style.transform='translateY(-4px)';this.style.borderColor='#60a5fa'"
+           onmouseleave="this.style.transform='none';this.style.borderColor='var(--border)'">
+        <div class="chai-flex chai-justify-between chai-items-start chai-mb-3">
+          <h4 class="chai-text-lg" style="font-family:'Cormorant Garamond',serif;color:var(--text-primary);font-weight:600;margin:0;">Cascara Soda</h4>
+          <span style="color:#60a5fa;font-family:'DM Sans',sans-serif;font-weight:700;white-space:nowrap;margin-left:12px;">₹260</span>
+        </div>
+        <p class="chai-text-sm chai-leading-relaxed" style="color:var(--text-muted);font-family:'DM Sans',sans-serif;margin:0 0 16px;">Coffee cherry husk tea, house-fermented, over soda. Wild and floral.</p>
+        <span class="chai-px-3 chai-py-1 chai-rounded-full chai-text-xs" style="background:rgba(96,165,250,0.1);color:#60a5fa;font-family:'DM Sans',sans-serif;border:1px solid rgba(96,165,250,0.2);">Fermented</span>
+      </div>
+
+      <div class="menu-item-card chai-flex chai-rounded-2xl chai-p-6 chai-transition-all"
+           data-cat="cold"
+           style="background:var(--bg-card);border:1px solid var(--border);"
+           onmouseenter="this.style.transform='translateY(-4px)';this.style.borderColor='#60a5fa'"
+           onmouseleave="this.style.transform='none';this.style.borderColor='var(--border)'">
+        <div class="chai-flex chai-justify-between chai-items-start chai-mb-3">
+          <h4 class="chai-text-lg" style="font-family:'Cormorant Garamond',serif;color:var(--text-primary);font-weight:600;margin:0;">Iced Americano</h4>
+          <span style="color:#60a5fa;font-family:'DM Sans',sans-serif;font-weight:700;white-space:nowrap;margin-left:12px;">₹255</span>
+        </div>
+        <p class="chai-text-sm chai-leading-relaxed" style="color:var(--text-muted);font-family:'DM Sans',sans-serif;margin:0 0 16px;">Double shot, cold water, crystal ice. Purity in a glass.</p>
+        <span class="chai-px-3 chai-py-1 chai-rounded-full chai-text-xs" style="background:rgba(96,165,250,0.1);color:#60a5fa;font-family:'DM Sans',sans-serif;border:1px solid rgba(96,165,250,0.2);">Pure</span>
+      </div>
+
+      <div class="menu-item-card chai-flex chai-rounded-2xl chai-p-6 chai-transition-all"
+           data-cat="specialty"
+           style="background:var(--bg-card);border:1px solid var(--border);"
+           onmouseenter="this.style.transform='translateY(-4px)';this.style.borderColor='#a855f7'"
+           onmouseleave="this.style.transform='none';this.style.borderColor='var(--border)'">
+        <div class="chai-flex chai-justify-between chai-items-start chai-mb-3">
+          <h4 class="chai-text-lg" style="font-family:'Cormorant Garamond',serif;color:var(--text-primary);font-weight:600;margin:0;">Rose Gold Latte</h4>
+          <span style="color:#a855f7;font-family:'DM Sans',sans-serif;font-weight:700;white-space:nowrap;margin-left:12px;">₹360</span>
+        </div>
+        <p class="chai-text-sm chai-leading-relaxed" style="color:var(--text-muted);font-family:'DM Sans',sans-serif;margin:0 0 16px;">Rose syrup, espresso, oat milk foam with edible 24k gold leaf.</p>
+        <span class="chai-px-3 chai-py-1 chai-rounded-full chai-text-xs" style="background:rgba(168,85,247,0.1);color:#a855f7;font-family:'DM Sans',sans-serif;border:1px solid rgba(168,85,247,0.2);">Elegant</span>
+      </div>
+
+      <div class="menu-item-card chai-flex chai-rounded-2xl chai-p-6 chai-transition-all"
+           data-cat="specialty"
+           style="background:linear-gradient(135deg,#0f1a0f,#0a110a);border:1px solid rgba(74,158,74,0.25);"
+           onmouseenter="this.style.transform='translateY(-4px)'"
+           onmouseleave="this.style.transform='none'">
+        <div class="chai-flex chai-justify-between chai-items-start chai-mb-3">
+          <div>
+            <span style="color:#4a9e4a;font-family:'DM Sans',sans-serif;font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;display:block;margin-bottom:4px;">Plant-Based</span>
+            <h4 class="chai-text-lg" style="font-family:'Cormorant Garamond',serif;color:var(--text-primary);font-weight:600;margin:0;">Matcha Latte</h4>
+          </div>
+          <span style="color:#4a9e4a;font-family:'DM Sans',sans-serif;font-weight:700;white-space:nowrap;margin-left:12px;">₹310</span>
+        </div>
+        <p class="chai-text-sm chai-leading-relaxed" style="color:rgba(240,247,240,0.6);font-family:'DM Sans',sans-serif;margin:0 0 16px;">Ceremonial grade matcha from Uji, Japan. Oat milk, light sweetness.</p>
+        <span class="chai-px-3 chai-py-1 chai-rounded-full chai-text-xs" style="background:rgba(74,158,74,0.15);color:#4a9e4a;font-family:'DM Sans',sans-serif;border:1px solid rgba(74,158,74,0.25);">Zen</span>
+      </div>
+
+      <div class="menu-item-card chai-flex chai-rounded-2xl chai-p-6 chai-transition-all"
+           data-cat="specialty"
+           style="background:var(--bg-card);border:1px solid var(--border);"
+           onmouseenter="this.style.transform='translateY(-4px)';this.style.borderColor='#f59e0b'"
+           onmouseleave="this.style.transform='none';this.style.borderColor='var(--border)'">
+        <div class="chai-flex chai-justify-between chai-items-start chai-mb-3">
+          <h4 class="chai-text-lg" style="font-family:'Cormorant Garamond',serif;color:var(--text-primary);font-weight:600;margin:0;">Turmeric Latte</h4>
+          <span style="color:#f59e0b;font-family:'DM Sans',sans-serif;font-weight:700;white-space:nowrap;margin-left:12px;">₹290</span>
+        </div>
+        <p class="chai-text-sm chai-leading-relaxed" style="color:var(--text-muted);font-family:'DM Sans',sans-serif;margin:0 0 16px;">Golden milk, turmeric, ginger, black pepper, coconut milk. Ancient remedy.</p>
+        <span class="chai-px-3 chai-py-1 chai-rounded-full chai-text-xs" style="background:rgba(245,158,11,0.1);color:#f59e0b;font-family:'DM Sans',sans-serif;border:1px solid rgba(245,158,11,0.2);">Golden</span>
+      </div>
+
+      <div class="menu-item-card chai-flex chai-rounded-2xl chai-p-6 chai-transition-all"
+           data-cat="specialty"
+           style="background:var(--bg-card);border:1px solid var(--border);"
+           onmouseenter="this.style.transform='translateY(-4px)';this.style.borderColor='#a855f7'"
+           onmouseleave="this.style.transform='none';this.style.borderColor='var(--border)'">
+        <div class="chai-flex chai-justify-between chai-items-start chai-mb-3">
+          <h4 class="chai-text-lg" style="font-family:'Cormorant Garamond',serif;color:var(--text-primary);font-weight:600;margin:0;">Midnight Bloom</h4>
+          <span style="color:#a855f7;font-family:'DM Sans',sans-serif;font-weight:700;white-space:nowrap;margin-left:12px;">₹395</span>
+        </div>
+        <p class="chai-text-sm chai-leading-relaxed" style="color:var(--text-muted);font-family:'DM Sans',sans-serif;margin:0 0 16px;">Butterfly pea tea + espresso. Pours purple, stirs to midnight black.</p>
+        <span class="chai-px-3 chai-py-1 chai-rounded-full chai-text-xs" style="background:rgba(168,85,247,0.1);color:#a855f7;font-family:'DM Sans',sans-serif;border:1px solid rgba(168,85,247,0.2);">Color-Changing</span>
+      </div>
+
+      <div class="menu-item-card chai-flex chai-rounded-2xl chai-p-6 chai-transition-all"
+           data-cat="specialty"
+           style="background:var(--bg-card);border:1px solid var(--border);"
+           onmouseenter="this.style.transform='translateY(-4px)';this.style.borderColor='var(--accent)'"
+           onmouseleave="this.style.transform='none';this.style.borderColor='var(--border)'">
+        <div class="chai-flex chai-justify-between chai-items-start chai-mb-3">
+          <h4 class="chai-text-lg" style="font-family:'Cormorant Garamond',serif;color:var(--text-primary);font-weight:600;margin:0;">Saffron Cortado</h4>
+          <span style="color:var(--accent);font-family:'DM Sans',sans-serif;font-weight:700;white-space:nowrap;margin-left:12px;">₹420</span>
+        </div>
+        <p class="chai-text-sm chai-leading-relaxed" style="color:var(--text-muted);font-family:'DM Sans',sans-serif;margin:0 0 16px;">Kesar saffron infused milk meets rich espresso. Pure liquid opulence.</p>
+        <span class="chai-px-3 chai-py-1 chai-rounded-full chai-text-xs" style="background:rgba(200,149,108,0.1);color:var(--accent);font-family:'DM Sans',sans-serif;border:1px solid rgba(200,149,108,0.2);">Opulent</span>
+      </div>
+
+      <div class="menu-item-card chai-flex chai-rounded-2xl chai-p-6 chai-transition-all"
+           data-cat="specialty"
+           style="background:var(--bg-card);border:1px solid var(--border);"
+           onmouseenter="this.style.transform='translateY(-4px)';this.style.borderColor='#f59e0b'"
+           onmouseleave="this.style.transform='none';this.style.borderColor='var(--border)'">
+        <div class="chai-flex chai-justify-between chai-items-start chai-mb-3">
+          <h4 class="chai-text-lg" style="font-family:'Cormorant Garamond',serif;color:var(--text-primary);font-weight:600;margin:0;">Honey Oat Flat White</h4>
+          <span style="color:#f59e0b;font-family:'DM Sans',sans-serif;font-weight:700;white-space:nowrap;margin-left:12px;">₹330</span>
+        </div>
+        <p class="chai-text-sm chai-leading-relaxed" style="color:var(--text-muted);font-family:'DM Sans',sans-serif;margin:0 0 16px;">Wild honey, oat milk ristretto. Smoked salt rim on the glass.</p>
+        <span class="chai-px-3 chai-py-1 chai-rounded-full chai-text-xs" style="background:rgba(245,158,11,0.1);color:#f59e0b;font-family:'DM Sans',sans-serif;border:1px solid rgba(245,158,11,0.2);">Honey</span>
+      </div>
+
+      <div class="menu-item-card chai-flex chai-rounded-2xl chai-p-6 chai-transition-all"
+           data-cat="specialty"
+           style="background:var(--bg-card);border:1px solid var(--border);"
+           onmouseenter="this.style.transform='translateY(-4px)';this.style.borderColor='#4a9e4a'"
+           onmouseleave="this.style.transform='none';this.style.borderColor='var(--border)'">
+        <div class="chai-flex chai-justify-between chai-items-start chai-mb-3">
+          <h4 class="chai-text-lg" style="font-family:'Cormorant Garamond',serif;color:var(--text-primary);font-weight:600;margin:0;">Masala Chai</h4>
+          <span style="color:#4a9e4a;font-family:'DM Sans',sans-serif;font-weight:700;white-space:nowrap;margin-left:12px;">₹150</span>
+        </div>
+        <p class="chai-text-sm chai-leading-relaxed" style="color:var(--text-muted);font-family:'DM Sans',sans-serif;margin:0 0 16px;">Assam tea, cardamom, ginger, cloves, black pepper. The original warmth.</p>
+        <span class="chai-px-3 chai-py-1 chai-rounded-full chai-text-xs" style="background:rgba(74,158,74,0.1);color:#4a9e4a;font-family:'DM Sans',sans-serif;border:1px solid rgba(74,158,74,0.2);">Traditional</span>
+      </div>
+
+      <div class="menu-item-card chai-flex chai-rounded-2xl chai-p-6 chai-transition-all"
+           data-cat="specialty"
+           style="background:var(--bg-card);border:1px solid var(--border);"
+           onmouseenter="this.style.transform='translateY(-4px)';this.style.borderColor='#4a9e4a'"
+           onmouseleave="this.style.transform='none';this.style.borderColor='var(--border)'">
+        <div class="chai-flex chai-justify-between chai-items-start chai-mb-3">
+          <h4 class="chai-text-lg" style="font-family:'Cormorant Garamond',serif;color:var(--text-primary);font-weight:600;margin:0;">Mushroom Coffee</h4>
+          <span style="color:#4a9e4a;font-family:'DM Sans',sans-serif;font-weight:700;white-space:nowrap;margin-left:12px;">₹380</span>
+        </div>
+        <p class="chai-text-sm chai-leading-relaxed" style="color:var(--text-muted);font-family:'DM Sans',sans-serif;margin:0 0 16px;">Lion's mane + chaga + Guatemalan espresso. Brain fuel of the future.</p>
+        <span class="chai-px-3 chai-py-1 chai-rounded-full chai-text-xs" style="background:rgba(74,158,74,0.1);color:#4a9e4a;font-family:'DM Sans',sans-serif;border:1px solid rgba(74,158,74,0.2);">Adaptogen</span>
+      </div>
+
+     
+      <div class="menu-item-card chai-flex chai-rounded-2xl chai-p-6 chai-transition-all"
+           data-cat="dessert"
+           style="background:var(--bg-card);border:1px solid var(--border);"
+           onmouseenter="this.style.transform='translateY(-4px)';this.style.borderColor='#f43f5e'"
+           onmouseleave="this.style.transform='none';this.style.borderColor='var(--border)'">
+        <div class="chai-flex chai-justify-between chai-items-start chai-mb-3">
+          <h4 class="chai-text-lg" style="font-family:'Cormorant Garamond',serif;color:var(--text-primary);font-weight:600;margin:0;">Tiramisu</h4>
+          <span style="color:#f43f5e;font-family:'DM Sans',sans-serif;font-weight:700;white-space:nowrap;margin-left:12px;">₹280</span>
+        </div>
+        <p class="chai-text-sm chai-leading-relaxed" style="color:var(--text-muted);font-family:'DM Sans',sans-serif;margin:0 0 16px;">Ladyfingers in our espresso, mascarpone cloud, bitter cocoa dust.</p>
+        <span class="chai-px-3 chai-py-1 chai-rounded-full chai-text-xs" style="background:rgba(244,63,94,0.1);color:#f43f5e;font-family:'DM Sans',sans-serif;border:1px solid rgba(244,63,94,0.2);">Italian</span>
+      </div>
+
+      <div class="menu-item-card chai-flex chai-rounded-2xl chai-p-6 chai-transition-all"
+           data-cat="dessert"
+           style="background:var(--bg-card);border:1px solid var(--border);"
+           onmouseenter="this.style.transform='translateY(-4px)';this.style.borderColor='#f43f5e'"
+           onmouseleave="this.style.transform='none';this.style.borderColor='var(--border)'">
+        <div class="chai-flex chai-justify-between chai-items-start chai-mb-3">
+          <h4 class="chai-text-lg" style="font-family:'Cormorant Garamond',serif;color:var(--text-primary);font-weight:600;margin:0;">Dark Chocolate Brownie</h4>
+          <span style="color:#f43f5e;font-family:'DM Sans',sans-serif;font-weight:700;white-space:nowrap;margin-left:12px;">₹180</span>
+        </div>
+        <p class="chai-text-sm chai-leading-relaxed" style="color:var(--text-muted);font-family:'DM Sans',sans-serif;margin:0 0 16px;">72% Valrhona dark chocolate. Fudgy, dense, warm from the oven.</p>
+        <span class="chai-px-3 chai-py-1 chai-rounded-full chai-text-xs" style="background:rgba(244,63,94,0.1);color:#f43f5e;font-family:'DM Sans',sans-serif;border:1px solid rgba(244,63,94,0.2);">Fudgy</span>
+      </div>
+
+      <div class="menu-item-card chai-flex chai-rounded-2xl chai-p-6 chai-transition-all"
+           data-cat="dessert"
+           style="background:var(--bg-card);border:1px solid var(--border);"
+           onmouseenter="this.style.transform='translateY(-4px)';this.style.borderColor='#f43f5e'"
+           onmouseleave="this.style.transform='none';this.style.borderColor='var(--border)'">
+        <div class="chai-flex chai-justify-between chai-items-start chai-mb-3">
+          <h4 class="chai-text-lg" style="font-family:'Cormorant Garamond',serif;color:var(--text-primary);font-weight:600;margin:0;">Crème Brûlée</h4>
+          <span style="color:#f43f5e;font-family:'DM Sans',sans-serif;font-weight:700;white-space:nowrap;margin-left:12px;">₹320</span>
+        </div>
+        <p class="chai-text-sm chai-leading-relaxed" style="color:var(--text-muted);font-family:'DM Sans',sans-serif;margin:0 0 16px;">Espresso-infused custard, torched caramel crust. Crack it at the table.</p>
+        <span class="chai-px-3 chai-py-1 chai-rounded-full chai-text-xs" style="background:rgba(244,63,94,0.1);color:#f43f5e;font-family:'DM Sans',sans-serif;border:1px solid rgba(244,63,94,0.2);">Torched</span>
+      </div>
+
+      <div class="menu-item-card chai-flex chai-rounded-2xl chai-p-6 chai-transition-all"
+           data-cat="dessert"
+           style="background:var(--bg-card);border:1px solid var(--border);"
+           onmouseenter="this.style.transform='translateY(-4px)';this.style.borderColor='#f43f5e'"
+           onmouseleave="this.style.transform='none';this.style.borderColor='var(--border)'">
+        <div class="chai-flex chai-justify-between chai-items-start chai-mb-3">
+          <h4 class="chai-text-lg" style="font-family:'Cormorant Garamond',serif;color:var(--text-primary);font-weight:600;margin:0;">Basque Cheesecake</h4>
+          <span style="color:#f43f5e;font-family:'DM Sans',sans-serif;font-weight:700;white-space:nowrap;margin-left:12px;">₹340</span>
+        </div>
+        <p class="chai-text-sm chai-leading-relaxed" style="color:var(--text-muted);font-family:'DM Sans',sans-serif;margin:0 0 16px;">Burnt exterior, creamy center. Intentionally imperfect — perfectly delicious.</p>
+        <span class="chai-px-3 chai-py-1 chai-rounded-full chai-text-xs" style="background:rgba(244,63,94,0.1);color:#f43f5e;font-family:'DM Sans',sans-serif;border:1px solid rgba(244,63,94,0.2);">Burnt</span>
+      </div>
+
+      <div class="menu-item-card chai-flex chai-rounded-2xl chai-p-6 chai-transition-all"
+           data-cat="dessert"
+           style="background:var(--bg-card);border:1px solid var(--border);"
+           onmouseenter="this.style.transform='translateY(-4px)';this.style.borderColor='#f43f5e'"
+           onmouseleave="this.style.transform='none';this.style.borderColor='var(--border)'">
+        <div class="chai-flex chai-justify-between chai-items-start chai-mb-3">
+          <h4 class="chai-text-lg" style="font-family:'Cormorant Garamond',serif;color:var(--text-primary);font-weight:600;margin:0;">Opera Cake</h4>
+          <span style="color:#f43f5e;font-family:'DM Sans',sans-serif;font-weight:700;white-space:nowrap;margin-left:12px;">₹310</span>
+        </div>
+        <p class="chai-text-sm chai-leading-relaxed" style="color:var(--text-muted);font-family:'DM Sans',sans-serif;margin:0 0 16px;">Seven layers of coffee buttercream and ganache. Architectural perfection.</p>
+        <span class="chai-px-3 chai-py-1 chai-rounded-full chai-text-xs" style="background:rgba(244,63,94,0.1);color:#f43f5e;font-family:'DM Sans',sans-serif;border:1px solid rgba(244,63,94,0.2);">French</span>
+      </div>
+
+      <div class="menu-item-card chai-flex chai-rounded-2xl chai-p-6 chai-transition-all"
+           data-cat="dessert"
+           style="background:var(--bg-card);border:1px solid var(--border);"
+           onmouseenter="this.style.transform='translateY(-4px)';this.style.borderColor='#f43f5e'"
+           onmouseleave="this.style.transform='none';this.style.borderColor='var(--border)'">
+        <div class="chai-flex chai-justify-between chai-items-start chai-mb-3">
+          <h4 class="chai-text-lg" style="font-family:'Cormorant Garamond',serif;color:var(--text-primary);font-weight:600;margin:0;">Affogato</h4>
+          <span style="color:#f43f5e;font-family:'DM Sans',sans-serif;font-weight:700;white-space:nowrap;margin-left:12px;">₹240</span>
+        </div>
+        <p class="chai-text-sm chai-leading-relaxed" style="color:var(--text-muted);font-family:'DM Sans',sans-serif;margin:0 0 16px;">Vanilla bean ice cream drowned in a double ristretto. Pure magic.</p>
+        <span class="chai-px-3 chai-py-1 chai-rounded-full chai-text-xs" style="background:rgba(244,63,94,0.1);color:#f43f5e;font-family:'DM Sans',sans-serif;border:1px solid rgba(244,63,94,0.2);">Classic</span>
+      </div>
+
+      <div class="menu-item-card chai-flex chai-rounded-2xl chai-p-6 chai-transition-all"
+           data-cat="dessert"
+           style="background:var(--bg-card);border:1px solid var(--border);"
+           onmouseenter="this.style.transform='translateY(-4px)';this.style.borderColor='#f43f5e'"
+           onmouseleave="this.style.transform='none';this.style.borderColor='var(--border)'">
+        <div class="chai-flex chai-justify-between chai-items-start chai-mb-3">
+          <h4 class="chai-text-lg" style="font-family:'Cormorant Garamond',serif;color:var(--text-primary);font-weight:600;margin:0;">Cardamom Cake</h4>
+          <span style="color:#f43f5e;font-family:'DM Sans',sans-serif;font-weight:700;white-space:nowrap;margin-left:12px;">₹220</span>
+        </div>
+        <p class="chai-text-sm chai-leading-relaxed" style="color:var(--text-muted);font-family:'DM Sans',sans-serif;margin:0 0 16px;">Nordic cardamom sponge, honey glaze, toasted almonds. Scandi warmth.</p>
+        <span class="chai-px-3 chai-py-1 chai-rounded-full chai-text-xs" style="background:rgba(244,63,94,0.1);color:#f43f5e;font-family:'DM Sans',sans-serif;border:1px solid rgba(244,63,94,0.2);">Nordic</span>
+      </div>
+
+      <div class="menu-item-card chai-flex chai-rounded-2xl chai-p-6 chai-transition-all"
+           data-cat="dessert"
+           style="background:var(--bg-card);border:1px solid var(--border);"
+           onmouseenter="this.style.transform='translateY(-4px)';this.style.borderColor='#f43f5e'"
+           onmouseleave="this.style.transform='none';this.style.borderColor='var(--border)'">
+        <div class="chai-flex chai-justify-between chai-items-start chai-mb-3">
+          <h4 class="chai-text-lg" style="font-family:'Cormorant Garamond',serif;color:var(--text-primary);font-weight:600;margin:0;">Molten Lava Cake</h4>
+          <span style="color:#f43f5e;font-family:'DM Sans',sans-serif;font-weight:700;white-space:nowrap;margin-left:12px;">₹350</span>
+        </div>
+        <p class="chai-text-sm chai-leading-relaxed" style="color:var(--text-muted);font-family:'DM Sans',sans-serif;margin:0 0 16px;">Dark chocolate shell, flowing espresso lava center. Allow 8 minutes.</p>
+        <span class="chai-px-3 chai-py-1 chai-rounded-full chai-text-xs" style="background:rgba(244,63,94,0.1);color:#f43f5e;font-family:'DM Sans',sans-serif;border:1px solid rgba(244,63,94,0.2);">Hot</span>
+      </div>
+
+
+      <div class="menu-item-card chai-flex chai-rounded-2xl chai-p-6 chai-transition-all"
+           data-cat="snack"
+           style="background:var(--bg-card);border:1px solid var(--border);"
+           onmouseenter="this.style.transform='translateY(-4px)';this.style.borderColor='#d4a017'"
+           onmouseleave="this.style.transform='none';this.style.borderColor='var(--border)'">
+        <div class="chai-flex chai-justify-between chai-items-start chai-mb-3">
+          <h4 class="chai-text-lg" style="font-family:'Cormorant Garamond',serif;color:var(--text-primary);font-weight:600;margin:0;">Almond Croissant</h4>
+          <span style="color:#d4a017;font-family:'DM Sans',sans-serif;font-weight:700;white-space:nowrap;margin-left:12px;">₹180</span>
+        </div>
+        <p class="chai-text-sm chai-leading-relaxed" style="color:var(--text-muted);font-family:'DM Sans',sans-serif;margin:0 0 16px;">Buttery, laminated pastry. Almond frangipane, toasted flaked almonds.</p>
+        <span class="chai-px-3 chai-py-1 chai-rounded-full chai-text-xs" style="background:rgba(212,160,23,0.1);color:#d4a017;font-family:'DM Sans',sans-serif;border:1px solid rgba(212,160,23,0.2);">Buttery</span>
+      </div>
+
+      <div class="menu-item-card chai-flex chai-rounded-2xl chai-p-6 chai-transition-all"
+           data-cat="snack"
+           style="background:var(--bg-card);border:1px solid var(--border);"
+           onmouseenter="this.style.transform='translateY(-4px)';this.style.borderColor='#d4a017'"
+           onmouseleave="this.style.transform='none';this.style.borderColor='var(--border)'">
+        <div class="chai-flex chai-justify-between chai-items-start chai-mb-3">
+          <h4 class="chai-text-lg" style="font-family:'Cormorant Garamond',serif;color:var(--text-primary);font-weight:600;margin:0;">Pain au Chocolat</h4>
+          <span style="color:#d4a017;font-family:'DM Sans',sans-serif;font-weight:700;white-space:nowrap;margin-left:12px;">₹195</span>
+        </div>
+        <p class="chai-text-sm chai-leading-relaxed" style="color:var(--text-muted);font-family:'DM Sans',sans-serif;margin:0 0 16px;">Twin Valrhona chocolate batons wrapped in golden puff pastry.</p>
+        <span class="chai-px-3 chai-py-1 chai-rounded-full chai-text-xs" style="background:rgba(212,160,23,0.1);color:#d4a017;font-family:'DM Sans',sans-serif;border:1px solid rgba(212,160,23,0.2);">French</span>
+      </div>
+
+      <div class="menu-item-card chai-flex chai-rounded-2xl chai-p-6 chai-transition-all"
+           data-cat="snack"
+           style="background:var(--bg-card);border:1px solid var(--border);"
+           onmouseenter="this.style.transform='translateY(-4px)';this.style.borderColor='#d4a017'"
+           onmouseleave="this.style.transform='none';this.style.borderColor='var(--border)'">
+        <div class="chai-flex chai-justify-between chai-items-start chai-mb-3">
+          <h4 class="chai-text-lg" style="font-family:'Cormorant Garamond',serif;color:var(--text-primary);font-weight:600;margin:0;">Avocado Toast</h4>
+          <span style="color:#d4a017;font-family:'DM Sans',sans-serif;font-weight:700;white-space:nowrap;margin-left:12px;">₹280</span>
+        </div>
+        <p class="chai-text-sm chai-leading-relaxed" style="color:var(--text-muted);font-family:'DM Sans',sans-serif;margin:0 0 16px;">Sourdough, smashed avo, dukkah, pickled red onion, everything seasoning.</p>
+        <span class="chai-px-3 chai-py-1 chai-rounded-full chai-text-xs" style="background:rgba(212,160,23,0.1);color:#d4a017;font-family:'DM Sans',sans-serif;border:1px solid rgba(212,160,23,0.2);">Brunch</span>
+      </div>
+
+      <div class="menu-item-card chai-flex chai-rounded-2xl chai-p-6 chai-transition-all"
+           data-cat="snack"
+           style="background:var(--bg-card);border:1px solid var(--border);"
+           onmouseenter="this.style.transform='translateY(-4px)';this.style.borderColor='#d4a017'"
+           onmouseleave="this.style.transform='none';this.style.borderColor='var(--border)'">
+        <div class="chai-flex chai-justify-between chai-items-start chai-mb-3">
+          <h4 class="chai-text-lg" style="font-family:'Cormorant Garamond',serif;color:var(--text-primary);font-weight:600;margin:0;">Cheese Board</h4>
+          <span style="color:#d4a017;font-family:'DM Sans',sans-serif;font-weight:700;white-space:nowrap;margin-left:12px;">₹450</span>
+        </div>
+        <p class="chai-text-sm chai-leading-relaxed" style="color:var(--text-muted);font-family:'DM Sans',sans-serif;margin:0 0 16px;">Aged cheddar, brie, fig preserve, crackers, grapes, candied walnuts.</p>
+        <span class="chai-px-3 chai-py-1 chai-rounded-full chai-text-xs" style="background:rgba(212,160,23,0.1);color:#d4a017;font-family:'DM Sans',sans-serif;border:1px solid rgba(212,160,23,0.2);">Sharing</span>
+      </div>
+
+      <div class="menu-item-card chai-flex chai-rounded-2xl chai-p-6 chai-transition-all"
+           data-cat="snack"
+           style="background:var(--bg-card);border:1px solid var(--border);"
+           onmouseenter="this.style.transform='translateY(-4px)';this.style.borderColor='#d4a017'"
+           onmouseleave="this.style.transform='none';this.style.borderColor='var(--border)'">
+        <div class="chai-flex chai-justify-between chai-items-start chai-mb-3">
+          <h4 class="chai-text-lg" style="font-family:'Cormorant Garamond',serif;color:var(--text-primary);font-weight:600;margin:0;">Truffle Mushroom Toast</h4>
+          <span style="color:#d4a017;font-family:'DM Sans',sans-serif;font-weight:700;white-space:nowrap;margin-left:12px;">₹260</span>
+        </div>
+        <p class="chai-text-sm chai-leading-relaxed" style="color:var(--text-muted);font-family:'DM Sans',sans-serif;margin:0 0 16px;">Wild mushroom medley on garlic ciabatta, truffle oil, fresh thyme.</p>
+        <span class="chai-px-3 chai-py-1 chai-rounded-full chai-text-xs" style="background:rgba(212,160,23,0.1);color:#d4a017;font-family:'DM Sans',sans-serif;border:1px solid rgba(212,160,23,0.2);">Truffle</span>
+      </div>
+
+      <div class="menu-item-card chai-flex chai-rounded-2xl chai-p-6 chai-transition-all"
+           data-cat="snack"
+           style="background:var(--bg-card);border:1px solid var(--border);"
+           onmouseenter="this.style.transform='translateY(-4px)';this.style.borderColor='#d4a017'"
+           onmouseleave="this.style.transform='none';this.style.borderColor='var(--border)'">
+        <div class="chai-flex chai-justify-between chai-items-start chai-mb-3">
+          <h4 class="chai-text-lg" style="font-family:'Cormorant Garamond',serif;color:var(--text-primary);font-weight:600;margin:0;">Smoked Salmon Bagel</h4>
+          <span style="color:#d4a017;font-family:'DM Sans',sans-serif;font-weight:700;white-space:nowrap;margin-left:12px;">₹380</span>
+        </div>
+        <p class="chai-text-sm chai-leading-relaxed" style="color:var(--text-muted);font-family:'DM Sans',sans-serif;margin:0 0 16px;">Cold-smoked salmon, cream cheese, capers, red onion, dill. NYC classic.</p>
+        <span class="chai-px-3 chai-py-1 chai-rounded-full chai-text-xs" style="background:rgba(212,160,23,0.1);color:#d4a017;font-family:'DM Sans',sans-serif;border:1px solid rgba(212,160,23,0.2);">NYC Style</span>
+      </div>
+
+      <div class="menu-item-card chai-flex chai-rounded-2xl chai-p-6 chai-transition-all"
+           data-cat="snack"
+           style="background:var(--bg-card);border:1px solid var(--border);"
+           onmouseenter="this.style.transform='translateY(-4px)';this.style.borderColor='#d4a017'"
+           onmouseleave="this.style.transform='none';this.style.borderColor='var(--border)'">
+        <div class="chai-flex chai-justify-between chai-items-start chai-mb-3">
+          <h4 class="chai-text-lg" style="font-family:'Cormorant Garamond',serif;color:var(--text-primary);font-weight:600;margin:0;">Quiche Lorraine</h4>
+          <span style="color:#d4a017;font-family:'DM Sans',sans-serif;font-weight:700;white-space:nowrap;margin-left:12px;">₹290</span>
+        </div>
+        <p class="chai-text-sm chai-leading-relaxed" style="color:var(--text-muted);font-family:'DM Sans',sans-serif;margin:0 0 16px;">Shortcrust, bacon lardons, gruyère, silky egg custard. Served warm.</p>
+        <span class="chai-px-3 chai-py-1 chai-rounded-full chai-text-xs" style="background:rgba(212,160,23,0.1);color:#d4a017;font-family:'DM Sans',sans-serif;border:1px solid rgba(212,160,23,0.2);">Warm</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<section id="about" class="chai-py-24" style="background:var(--bg-surface);border-top:1px solid var(--border);">
+  <div style="max-width:1200px;margin:0 auto;padding:0 2rem;">
+    <div class="chai-flex chai-items-center chai-gap-16" style="flex-wrap:wrap;">
+
+
+      <div style="flex:1;min-width:280px;" data-animate="left">
+        <div class="chai-relative" style="aspect-ratio:1;max-width:420px;">
+   
+          <div class="chai-absolute chai-rounded-3xl"
+               style="inset:0;background:var(--bg-card);border:1px solid var(--border);"></div>
+          <div class="chai-absolute chai-rounded-2xl"
+               style="inset:24px;background:linear-gradient(135deg,var(--accent),#3d1c08);opacity:0.5;"></div>
+          <div class="chai-absolute" style="inset:0;display:flex;align-items:center;justify-content:center;">
+            <div class="chai-text-center">
+              <div style="font-family:'Cormorant Garamond',serif;font-size:5rem;color:var(--text-primary);line-height:1;opacity:0.9;">☕</div>
+              <div class="chai-text-xs chai-uppercase chai-tracking-widest" style="color:var(--accent);font-family:'DM Sans',sans-serif;letter-spacing:0.2em;margin-top:12px;">Since 2021</div>
+            </div>
+          </div>
+    
+          <div class="chai-absolute" style="top:16px;left:16px;width:24px;height:24px;border-top:2px solid var(--accent);border-left:2px solid var(--accent);"></div>
+          <div class="chai-absolute" style="bottom:16px;right:16px;width:24px;height:24px;border-bottom:2px solid var(--accent);border-right:2px solid var(--accent);"></div>
+        </div>
+      </div>
+
+      <div style="flex:1;min-width:300px;" data-animate="right">
+        <div class="chai-flex chai-items-center chai-gap-4 chai-mb-5">
+          <div style="width:32px;height:1px;background:var(--accent);"></div>
+          <span class="chai-text-xs chai-uppercase chai-tracking-widest"
+                style="color:var(--accent);font-family:'DM Sans',sans-serif;letter-spacing:0.22em;">Our Story</span>
+        </div>
+        <h2 class="chai-mb-6" style="font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3rem);font-weight:300;color:var(--text-primary);line-height:1.2;margin:0 0 1.5rem;">
+          Obsessed with<br><em style="font-style:italic;color:var(--accent);">every variable.</em>
+        </h2>
+        <p class="chai-text-base chai-leading-relaxed chai-mb-5" style="color:var(--text-secondary);font-family:'DM Sans',sans-serif;font-weight:300;line-height:1.8;margin:0 0 1.25rem;">
+          We started Kōhī because we believed coffee deserved the same attention as fine wine. Every bean tells the story of its terroir — the altitude, the rainfall, the hands that picked it.
+        </p>
+        <p class="chai-text-base chai-leading-relaxed chai-mb-8" style="color:var(--text-secondary);font-family:'DM Sans',sans-serif;font-weight:300;line-height:1.8;margin:0 0 2rem;">
+          Our roastery sources directly from 14 origins. We roast in small batches every Thursday, so what arrives in your cup was roasted within 7 days. No exceptions.
+        </p>
+        <div class="chai-flex chai-gap-8" style="flex-wrap:wrap;">
+          <div>
+            <div style="font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--accent);font-weight:300;">7 days</div>
+            <div class="chai-text-xs chai-uppercase" style="color:var(--text-muted);font-family:'DM Sans',sans-serif;letter-spacing:0.12em;margin-top:2px;">Max roast age</div>
+          </div>
+          <div style="width:1px;background:var(--border);"></div>
+          <div>
+            <div style="font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--accent);font-weight:300;">Direct</div>
+            <div class="chai-text-xs chai-uppercase" style="color:var(--text-muted);font-family:'DM Sans',sans-serif;letter-spacing:0.12em;margin-top:2px;">Farm trade</div>
+          </div>
+          <div style="width:1px;background:var(--border);"></div>
+          <div>
+            <div style="font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--accent);font-weight:300;">93°C</div>
+            <div class="chai-text-xs chai-uppercase" style="color:var(--text-muted);font-family:'DM Sans',sans-serif;letter-spacing:0.12em;margin-top:2px;">Brew temp</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<section id="labs" class="chai-py-24" style="background:var(--bg-page);">
+  <div style="max-width:1200px;margin:0 auto;padding:0 2rem;">
+
+    <div class="chai-text-center chai-mb-14" data-animate="up">
+      <div class="chai-flex chai-items-center chai-justify-center chai-gap-4 chai-mb-4">
+        <div style="width:40px;height:1px;background:var(--accent);"></div>
+        <span class="chai-text-xs chai-uppercase chai-tracking-widest"
+              style="color:var(--accent);font-family:'DM Sans',sans-serif;letter-spacing:0.22em;"></span>
+        <div style="width:40px;height:1px;background:var(--accent);"></div>
+      </div>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.5rem);font-weight:300;color:var(--text-primary);margin:0 0 1rem;">
+        The Engine 
+      </h2>
+      <p style="color:var(--text-muted);font-family:'DM Sans',sans-serif;max-width:500px;margin:0 auto;font-size:0.95rem;">
+     <code style="color:var(--accent);font-family:'JetBrains Mono',monospace;font-size:0.85em;"></code> 
+      </p>
+    </div>
+
+    <div class="chai-flex chai-gap-8" style="flex-wrap:wrap;align-items:flex-start;">
+
+
+      <div class="chai-rounded-2xl chai-p-8 chai-shadow-lg" style="flex:1;min-width:280px;background:var(--bg-card);border:1px solid var(--border);" data-animate="up" data-delay="0">
+        <div class="chai-flex chai-items-center chai-gap-3 chai-mb-6">
+          <div style="width:8px;height:8px;border-radius:50%;background:var(--accent);"></div>
+          <h3 class="chai-text-lg" style="font-family:'Cormorant Garamond',serif;color:var(--text-primary);margin:0;font-weight:600;">Theme Switcher</h3>
+        </div>
+        <p class="chai-text-sm chai-mb-6" style="color:var(--text-muted);font-family:'DM Sans',sans-serif;line-height:1.6;margin:0 0 1.5rem;">
+         <code style="color:var(--accent);font-family:'JetBrains Mono',monospace;"></code> 
+        </p>
+        <div class="chai-flex chai-gap-3" style="flex-wrap:wrap;">
+          <button class="theme-btn" data-theme="warm-dark"
+                  style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#1a1108,#c8956c);border:2px solid transparent;cursor:pointer;transition:all 0.2s ease;"
+                  title="Warm Dark"></button>
+          <button class="theme-btn" data-theme="warm-light"
+                  style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#fdf6ee,#9a531c);border:2px solid transparent;cursor:pointer;transition:all 0.2s ease;"
+                  title="Warm Light"></button>
+          <button class="theme-btn" data-theme="forest-dark"
+                  style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#0f1a0f,#4a9e4a);border:2px solid transparent;cursor:pointer;transition:all 0.2s ease;"
+                  title="Forest Dark"></button>
+          <button class="theme-btn" data-theme="slate-modern"
+                  style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#1a1f2e,#f59e0b);border:2px solid transparent;cursor:pointer;transition:all 0.2s ease;"
+                  title="Slate Modern"></button>
+        </div>
+        <div class="chai-mt-4 chai-rounded-lg chai-p-3" style="background:var(--bg-surface);border:1px solid var(--border);">
+          <code style="font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--text-secondary);">
+           
+          </code>
+        </div>
+      </div>
+
+
+      <div class="chai-rounded-2xl chai-p-8 chai-shadow-lg" style="flex:1;min-width:280px;background:var(--bg-card);border:1px solid var(--border);" data-animate="up" data-delay="100">
+        <div class="chai-flex chai-items-center chai-gap-3 chai-mb-6">
+          <div style="width:8px;height:8px;border-radius:50%;background:#a855f7;"></div>
+          <h3 class="chai-text-lg" style="font-family:'Cormorant Garamond',serif;color:var(--text-primary);margin:0;font-weight:600;">Color Generator</h3>
+        </div>
+        <p class="chai-text-sm chai-mb-5" style="color:var(--text-muted);font-family:'DM Sans',sans-serif;line-height:1.6;margin:0 0 1.25rem;">
+          Pick any color and register  <code style="color:var(--accent);font-family:'JetBrains Mono',monospace;"></code> token
+        </p>
+
+        <div class="chai-flex chai-items-center chai-gap-4 chai-mb-4">
+          <div style="position:relative;width:56px;height:56px;border-radius:12px;overflow:hidden;border:1px solid var(--border);flex-shrink:0;">
+            <div id="color-preview" style="width:100%;height:100%;"></div>
+          </div>
+          <div style="flex:1;">
+            <label style="font-family:'DM Sans',sans-serif;font-size:0.72rem;color:var(--text-muted);letter-spacing:0.1em;text-transform:uppercase;display:block;margin-bottom:6px;">Pick a Color</label>
+            <input type="color" id="color-picker" value="#c8956c"
+                   style="width:100%;height:36px;border:1px solid var(--border);border-radius:8px;
+                          background:var(--bg-surface);cursor:pointer;padding:2px;"/>
+          </div>
+        </div>
+
+
+        <button id="apply-color"
+                class="chai-w-full chai-py-3 chai-rounded-xl chai-cursor-pointer chai-font-medium chai-transition-all"
+                style="background:var(--accent);color:#fff;border:none;cursor:pointer;
+                       font-family:'DM Sans',sans-serif;font-size:0.85rem;font-weight:600;transition:all 0.2s ease;"
+                onmouseenter="this.style.transform='translateY(-1px)'"
+                onmouseleave="this.style.transform='none'">
+          Apply Color
+        </button>
+      </div>
+
+      <div class="chai-rounded-2xl chai-p-8 chai-shadow-lg" style="flex:1.4;min-width:320px;background:var(--bg-card);border:1px solid var(--border);" data-animate="up" data-delay="200">
+        <div class="chai-flex chai-items-center chai-gap-3 chai-mb-6">
+          <div style="width:8px;height:8px;border-radius:50%;background:#4a9e4a;"></div>
+          <h3 class="chai-text-lg" style="font-family:'Cormorant Garamond',serif;color:var(--text-primary);margin:0;font-weight:600;">Engine Report</h3>
+        </div>
+        <div id="engine-stats">
+          <p style="color:var(--text-muted);font-family:'DM Sans',sans-serif;font-size:0.85rem;"></p>
+        </div>
+      </div>
+
+    </div>
+
+
+ 
+</section>
+
+
+
+<footer id="order" class="chai-py-16" style="background:var(--bg-surface);border-top:1px solid var(--border);">
+  <div style="max-width:1200px;margin:0 auto;padding:0 2rem;">
+
+    <div class="chai-flex chai-justify-between chai-items-start chai-mb-16" style="flex-wrap:wrap;gap:3rem;">
+
+
+      <div style="max-width:280px;">
+        <div class="chai-flex chai-items-center chai-gap-3 chai-mb-5">
+          <div class="chai-flex chai-items-center chai-justify-center chai-rounded-full"
+               style="width:36px;height:36px;background:var(--accent);font-family:'Cormorant Garamond',serif;font-size:1rem;color:#0b0a09;font-weight:700;">
+            K
+          </div>
+          <span style="font-family:'Cormorant Garamond',serif;color:var(--text-primary);letter-spacing:0.18em;font-weight:300;font-size:1rem;">Kōhī</span>
+        </div>
+        <p class="chai-text-sm chai-leading-relaxed" style="color:var(--text-muted);font-family:'DM Sans',sans-serif;font-weight:300;line-height:1.75;margin:0 0 1.5rem;">
+         
+        </p>
+        <div class="chai-flex chai-gap-3">
+          <div style="width:32px;height:32px;border-radius:50%;background:var(--bg-card);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:0.8rem;">
+            ◈
+          </div>
+          <div style="width:32px;height:32px;border-radius:50%;background:var(--bg-card);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:0.8rem;">
+            ✦
+          </div>
+          <div style="width:32px;height:32px;border-radius:50%;background:var(--bg-card);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:0.8rem;">
+            ◉
+          </div>
+        </div>
+      </div>
+
+
+      <div>
+        <p class="chai-text-xs chai-uppercase chai-mb-5" style="color:var(--accent);font-family:'DM Sans',sans-serif;letter-spacing:0.18em;">Menu</p>
+        <div class="chai-flex chai-flex-col chai-gap-3">
+          <a href="#" style="color:var(--text-secondary);font-family:'DM Sans',sans-serif;font-size:0.9rem;text-decoration:none;">Espresso Bar</a>
+          <a href="#" style="color:var(--text-secondary);font-family:'DM Sans',sans-serif;font-size:0.9rem;text-decoration:none;">Cold Drinks</a>
+          <a href="#" style="color:var(--text-secondary);font-family:'DM Sans',sans-serif;font-size:0.9rem;text-decoration:none;">Specialty</a>
+          <a href="#" style="color:var(--text-secondary);font-family:'DM Sans',sans-serif;font-size:0.9rem;text-decoration:none;">Desserts</a>
+          <a href="#" style="color:var(--text-secondary);font-family:'DM Sans',sans-serif;font-size:0.9rem;text-decoration:none;">Snacks</a>
+        </div>
+      </div>
+<div>
+  <p class="chai-text-xs chai-uppercase chai-mb-5" style="color:var(--accent);font-family:'DM Sans',sans-serif;letter-spacing:0.18em;">
+    Café Branches
+  </p>
+  <div class="chai-flex chai-flex-col chai-gap-3">
+    <a href="#labs" style="color:var(--text-secondary);font-family:'DM Sans',sans-serif;font-size:0.9rem;text-decoration:none;">
+      Rourkela Outlet
+    </a>
+    <a href="#" style="color:var(--text-secondary);font-family:'DM Sans',sans-serif;font-size:0.9rem;text-decoration:none;">
+      Bhubaneswar Café
+    </a>
+    <a href="#" style="color:var(--text-secondary);font-family:'DM Sans',sans-serif;font-size:0.9rem;text-decoration:none;">
+      Kolkata Brew Bar
+    </a>
+    <a href="#" style="color:var(--text-secondary);font-family:'DM Sans',sans-serif;font-size:0.9rem;text-decoration:none;">
+      Delhi Central Café
+    </a>
+  </div>
+</div>
+
+   
+      <div style="max-width:280px;">
+        <p class="chai-text-xs chai-uppercase chai-mb-5" style="color:var(--accent);font-family:'DM Sans',sans-serif;letter-spacing:0.18em;">Stay Updated</p>
+        <p class="chai-text-sm chai-mb-4" style="color:var(--text-muted);font-family:'DM Sans',sans-serif;line-height:1.6;margin:0 0 1rem;">
+          Weekly roast notes and new menu arrivals.
+        </p>
+        <div class="chai-flex chai-gap-2">
+          <input type="email" placeholder="your@email.com"
+                 style="flex:1;padding:10px 14px;background:var(--bg-card);border:1px solid var(--border);
+                        border-radius:10px;color:var(--text-primary);font-family:'DM Sans',sans-serif;
+                        font-size:0.85rem;outline:none;"/>
+          <button style="padding:10px 16px;background:var(--accent);color:#0b0a09;border:none;
+                         border-radius:10px;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:0.8rem;font-weight:600;
+                         white-space:nowrap;transition:all 0.2s ease;"
+                  onmouseenter="this.style.background='var(--accent-hover)'"
+                  onmouseleave="this.style.background='var(--accent)'">
+            Join
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="chai-flex chai-justify-between chai-items-center chai-pt-8"
+         style="border-top:1px solid var(--border);flex-wrap:wrap;gap:1rem;">
+      <p class="chai-text-xs" style="color:var(--text-muted);font-family:'DM Sans',sans-serif;margin:0;">
+        © 2024 Kōhī Specialty Coffee
+      </p>
+      <div class="chai-flex chai-items-center chai-gap-2">
+        <div style="width:6px;height:6px;border-radius:50%;background:#4a9e4a;animation:pulse 2s ease infinite;"></div>
+        <span class="chai-text-xs" style="color:var(--text-muted);font-family:'JetBrains Mono',monospace;">
+        
+        </span>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
